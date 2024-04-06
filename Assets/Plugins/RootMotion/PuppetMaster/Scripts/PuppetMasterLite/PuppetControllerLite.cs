@@ -86,8 +86,8 @@ namespace RootMotion.Dynamics
                     puppetMaster.muscles[index].pinWeightMlp = Mathf.Lerp(1f, pinWeightMlp, dam);
                     puppetMaster.muscles[index].muscleWeightMlp = Mathf.Lerp(1f, muscleWeightMlp, dam);
 
-                    puppetMaster.muscles[index].rigidbody.drag = d;
-                    puppetMaster.muscles[index].rigidbody.angularDrag = angularD;
+                    puppetMaster.muscles[index].rigidbody.linearDamping = d;
+                    puppetMaster.muscles[index].rigidbody.angularDamping = angularD;
 
                     //puppetMaster.muscles[index].mappingWeightMlp = mappingWeight;
                 }

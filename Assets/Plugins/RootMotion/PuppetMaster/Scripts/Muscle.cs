@@ -929,7 +929,7 @@ namespace RootMotion.Dynamics
         // Update this Muscle
         public virtual void Update(float pinWeightMaster, float muscleWeightMaster, float muscleSpring, float muscleDamper, float pinPow, float pinDistanceFalloff, bool rotationTargetChanged, bool angularPinning, float deltaTime)
         {
-            state.velocity = rigidbody.velocity;
+            state.velocity = rigidbody.linearVelocity;
             state.angularVelocity = rigidbody.angularVelocity;
 
             if (state.isDisconnected)
@@ -1128,7 +1128,7 @@ namespace RootMotion.Dynamics
             if (deltaTime > 0f) p /= deltaTime;
 
             if (ignoreTargetVelocity) targetVel = Vector3.zero;
-            Vector3 force = -r.velocity + targetVel + p;
+            Vector3 force = -r.linearVelocity + targetVel + p;
             if (r.useGravity) force -= Physics.gravity * deltaTime;
             force *= w;
             if (pinDistanceFalloff > 0f) force /= 1f + posOffset.sqrMagnitude * pinDistanceFalloff;

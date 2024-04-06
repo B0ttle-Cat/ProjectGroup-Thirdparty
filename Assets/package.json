@@ -1,9 +1,5 @@
 {
   "name": "com.b0ttlecat.thirdparty",
   "version": "0.0.1",
-  "displayName": "BC.Thirdparty",
-  "dependencies": {
-    "com.unity.render-pipelines.universal": "16.0.4",
-    "com.unity.toonshader": "0.9.5-preview"
-  }
+  "displayName": "BC.Thirdparty"
 }

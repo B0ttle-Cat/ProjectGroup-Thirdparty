@@ -189,7 +189,7 @@ namespace RootMotion.Dynamics {
                     m.state.pinWeightMlp = 0f;
                     m.state.muscleDamperAdd = stateSettings.deadMuscleDamper;
 
-                    m.rigidbody.velocity = m.mappedVelocity;
+                    m.rigidbody.linearVelocity = m.mappedVelocity;
                     m.rigidbody.angularVelocity = m.mappedAngularVelocity;
                 }
 			}
@@ -359,7 +359,7 @@ namespace RootMotion.Dynamics {
 				m.joint.gameObject.SetActive(true);
                 if (kinematic) m.rigidbody.collisionDetectionMode = CollisionDetectionMode.Discrete;
                 m.SetKinematic(kinematic);
-				m.rigidbody.velocity = Vector3.zero;
+				m.rigidbody.linearVelocity = Vector3.zero;
 				m.rigidbody.angularVelocity = Vector3.zero;
 			}
 
@@ -380,7 +380,7 @@ namespace RootMotion.Dynamics {
 
 		private bool CanFreeze() {
 			foreach (Muscle m in muscles) {
-				if (m.rigidbody.velocity.sqrMagnitude > stateSettings.maxFreezeSqrVelocity) return false;
+				if (m.rigidbody.linearVelocity.sqrMagnitude > stateSettings.maxFreezeSqrVelocity) return false;
 			}
 			return true;
 		}

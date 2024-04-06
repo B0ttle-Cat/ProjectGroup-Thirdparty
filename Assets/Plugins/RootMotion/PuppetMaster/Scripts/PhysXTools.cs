@@ -13,7 +13,7 @@ namespace RootMotion.Dynamics {
         /// </summary>
         public static void Predict(Rigidbody r, int steps, out Vector3 position, out Quaternion rotation)
         {
-            Predict(r, steps, out position, out rotation, Physics.gravity, r.drag, r.angularDrag);
+            Predict(r, steps, out position, out rotation, Physics.gravity, r.linearDamping, r.angularDamping);
         }
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace RootMotion.Dynamics {
         {
             position = r.position;
             rotation = r.rotation;
-            Vector3 velocity = r.velocity;
+            Vector3 velocity = r.linearVelocity;
             Vector3 angularVelocity = r.angularVelocity;
 
             for (int i = 0; i < steps; i++)
@@ -94,7 +94,7 @@ namespace RootMotion.Dynamics {
 			
 			for (int i = 0; i < rigidbodies.Length; i++) {
 				if (rigidbodies[i].gameObject.activeInHierarchy) {
-					CoM += rigidbodies[i].velocity * rigidbodies[i].mass;
+					CoM += rigidbodies[i].linearVelocity * rigidbodies[i].mass;
 					
 					c += rigidbodies[i].mass;
 				}
@@ -227,7 +227,7 @@ namespace RootMotion.Dynamics {
 		/// </summary>
 		public static void AddFromToForce(Rigidbody r, Vector3 fromV, Vector3 toV, ForceMode forceMode) {
 			Vector3 requiredAcceleration = GetLinearAcceleration(fromV, toV);
-			requiredAcceleration -= r.velocity;
+			requiredAcceleration -= r.linearVelocity;
 			
 			switch(forceMode) {
 			case ForceMode.Acceleration:

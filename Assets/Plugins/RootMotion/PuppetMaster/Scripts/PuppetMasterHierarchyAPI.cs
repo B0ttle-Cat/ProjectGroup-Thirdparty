@@ -221,7 +221,7 @@ namespace RootMotion.Dynamics {
 			muscle.Initiate(muscles);
 			
 			if (connectTo != null) {
-				muscle.rigidbody.velocity = connectTo.velocity;
+				muscle.rigidbody.linearVelocity = connectTo.linearVelocity;
 				muscle.rigidbody.angularVelocity = connectTo.angularVelocity;
 			}
 			
@@ -705,7 +705,7 @@ namespace RootMotion.Dynamics {
 
                 if (applyMappedVelocity)
                 {
-                    m.rigidbody.velocity = m.mappedVelocity;
+                    m.rigidbody.linearVelocity = m.mappedVelocity;
                     m.rigidbody.angularVelocity = m.mappedAngularVelocity;
                 }
             }

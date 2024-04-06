@@ -1,15 +1,12 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 
-using UnityEngine;
-
-namespace RootMotion.FinalIK
-{
+namespace RootMotion.FinalIK {
 
 	/// <summary>
 	/// Handles smooth aim target switching, weight blending, target interpolation and root rotation.
 	/// </summary>
-	public class AimController : MonoBehaviour
-	{
+	public class AimController : MonoBehaviour {
 
 		[Tooltip("Reference to the AimIK component.")]
 		/// <summary>
@@ -69,7 +66,7 @@ namespace RootMotion.FinalIK
 		/// </summary>
 		public float slerpSpeed = 3f;
 
-		[Tooltip("Smoothing time for turning towards the yaw and pitch of the target using Mathf.SmoothDampAngle. Value of 0 means smooth damping is disabled." )]
+        [Tooltip("Smoothing time for turning towards the yaw and pitch of the target using Mathf.SmoothDampAngle. Value of 0 means smooth damping is disabled." )]
         /// <summary>
 		/// Smoothing time for turning towards the yaw and pitch of the target using Mathf.SmoothDampAngle. Value of 0 means smooth damping is disabled.
 		/// </summary>
@@ -101,19 +98,19 @@ namespace RootMotion.FinalIK
 		/// </summary>
 		[Range(0f, 180f)] public float maxRootAngle = 45f;
 
-		[Tooltip("If enabled, aligns the root forward to target direction after 'Max Root Angle' has been exceeded.")]
+        [Tooltip("If enabled, aligns the root forward to target direction after 'Max Root Angle' has been exceeded.")]
         /// <summary>
         /// If enabled, aligns the root forward to target direction after 'Max Root Angle' has been exceeded.
         /// </summary>
         public bool turnToTarget;
 
-		[Tooltip("The time of turning towards the target direction if 'Max Root Angle has been exceeded and 'Turn To Target' is enabled.")]
+        [Tooltip("The time of turning towards the target direction if 'Max Root Angle has been exceeded and 'Turn To Target' is enabled.")]
         /// <summary>
         /// The time of turning towards the target direction if 'Max Root Angle has been exceeded and 'Turn To Target' is enabled.
         /// </summary>
         public float turnToTargetTime = 0.2f;
 
-		[Header("Mode")]
+        [Header("Mode")]
 
 		[Tooltip("If true, AimIK will consider whatever the current direction of the weapon to be the forward aiming direction and work additively on top of that. This enables you to use recoil and reloading animations seamlessly with AimIK. Adjust the Vector3 value below if the weapon is not aiming perfectly forward in the aiming animation clip.")]
 		/// <summary>
@@ -133,90 +130,84 @@ namespace RootMotion.FinalIK
 		private Vector3 lastPosition;
 		private Vector3 dir;
 		private bool lastSmoothTowardsTarget;
-		private bool turningToTarget;
-		private float turnToTargetMlp = 1f;
-		private float turnToTargetMlpV;
+        private bool turningToTarget;
+        private float turnToTargetMlp = 1f;
+        private float turnToTargetMlpV;
 
-		void Start()
-		{
+        void Start() {
 			lastPosition = ik.solver.IKPosition;
 			dir = ik.solver.IKPosition - pivot;
 
 			ik.solver.target = null;
 		}
 
-		void LateUpdate()
-		{
+		void LateUpdate () {
 			// If target has changed...
-			if(target != lastTarget)
-			{
-				if(lastTarget == null && target != null && ik.solver.IKPositionWeight <= 0f)
-				{
-					lastPosition = target.position;
-					dir = target.position - pivot;
-					ik.solver.IKPosition = target.position + offset;
-				}
-				else
-				{
-					lastPosition = ik.solver.IKPosition;
-					dir = ik.solver.IKPosition - pivot;
-				}
+			if (target != lastTarget) {
+                if (lastTarget == null && target != null && ik.solver.IKPositionWeight <= 0f)
+                {
+                    lastPosition = target.position;
+                    dir = target.position - pivot;
+                    ik.solver.IKPosition = target.position + offset;
+                }
+                else
+                {
+                    lastPosition = ik.solver.IKPosition;
+                    dir = ik.solver.IKPosition - pivot;
+                }
 
-				switchWeight = 0f;
+                switchWeight = 0f;
 				lastTarget = target;
 			}
 
-			// Smooth weight
-			float targetWeight = target != null ? weight : 0f;
-			ik.solver.IKPositionWeight = Mathf.SmoothDamp(ik.solver.IKPositionWeight, targetWeight, ref weightV, weightSmoothTime);
-			if(ik.solver.IKPositionWeight >= 0.999f && targetWeight > ik.solver.IKPositionWeight) ik.solver.IKPositionWeight = 1f;
-			if(ik.solver.IKPositionWeight <= 0.001f && targetWeight < ik.solver.IKPositionWeight) ik.solver.IKPositionWeight = 0f;
+            // Smooth weight
+            float targetWeight = target != null ? weight : 0f;
+            ik.solver.IKPositionWeight = Mathf.SmoothDamp(ik.solver.IKPositionWeight, targetWeight, ref weightV, weightSmoothTime);
+            if (ik.solver.IKPositionWeight >= 0.999f && targetWeight > ik.solver.IKPositionWeight) ik.solver.IKPositionWeight = 1f;
+            if (ik.solver.IKPositionWeight <= 0.001f && targetWeight < ik.solver.IKPositionWeight) ik.solver.IKPositionWeight = 0f;
 
-			if(ik.solver.IKPositionWeight <= 0f) return;
+            if (ik.solver.IKPositionWeight <= 0f) return;
 
 			// Smooth target switching
 			switchWeight = Mathf.SmoothDamp(switchWeight, 1f, ref switchWeightV, targetSwitchSmoothTime);
-			if(switchWeight >= 0.999f) switchWeight = 1f;
+			if (switchWeight >= 0.999f) switchWeight = 1f;
 
-			if(target != null)
-			{
+			if (target != null) {
 				ik.solver.IKPosition = Vector3.Lerp(lastPosition, target.position + offset, switchWeight);
 			}
 
 			// Smooth turn towards target
-			if(smoothTurnTowardsTarget != lastSmoothTowardsTarget)
-			{
+			if (smoothTurnTowardsTarget != lastSmoothTowardsTarget) {
 				dir = ik.solver.IKPosition - pivot;
 				lastSmoothTowardsTarget = smoothTurnTowardsTarget;
 			}
 
-			if(smoothTurnTowardsTarget)
-			{
+			if (smoothTurnTowardsTarget) {
 				Vector3 targetDir = ik.solver.IKPosition - pivot;
 
-				// Slerp
-				if(slerpSpeed > 0f) dir = Vector3.Slerp(dir, targetDir, Time.deltaTime * slerpSpeed);
+                // Slerp
+				if (slerpSpeed > 0f) dir = Vector3.Slerp(dir, targetDir, Time.deltaTime * slerpSpeed);
 
-				// RotateTowards
-				if(maxRadiansDelta > 0 || maxMagnitudeDelta > 0f) dir = Vector3.RotateTowards(dir, targetDir, Time.deltaTime * maxRadiansDelta, maxMagnitudeDelta);
+                // RotateTowards
+				if (maxRadiansDelta > 0 || maxMagnitudeDelta > 0f) dir = Vector3.RotateTowards(dir, targetDir, Time.deltaTime * maxRadiansDelta, maxMagnitudeDelta);
 
-				// SmoothDamp
-				if(smoothDampTime > 0f)
-				{
-					float yaw = V3Tools.GetYaw(dir);
-					float targetYaw = V3Tools.GetYaw(targetDir);
-					float y = Mathf.SmoothDampAngle(yaw, targetYaw, ref yawV, smoothDampTime);
+                // SmoothDamp
+                if (smoothDampTime > 0f)
+                {
+                    float yaw = V3Tools.GetYaw(dir);
+                    float targetYaw = V3Tools.GetYaw(targetDir);
+                    float y = Mathf.SmoothDampAngle(yaw, targetYaw, ref yawV, smoothDampTime);
 
-					float pitch = V3Tools.GetPitch(dir);
-					float targetPitch = V3Tools.GetPitch(targetDir);
-					float p = Mathf.SmoothDampAngle(pitch, targetPitch, ref pitchV, smoothDampTime);
+                    float pitch = V3Tools.GetPitch(dir);
+                    float targetPitch = V3Tools.GetPitch(targetDir);
+                    float p = Mathf.SmoothDampAngle(pitch, targetPitch, ref pitchV, smoothDampTime);
 
-					float dirMag = Mathf.SmoothDamp(dir.magnitude, targetDir.magnitude, ref dirMagV, smoothDampTime);
+                    float dirMag = Mathf.SmoothDamp(dir.magnitude, targetDir.magnitude, ref dirMagV, smoothDampTime);
 
-					dir = Quaternion.Euler(p, y, 0f) * Vector3.forward * dirMag;
-				}
+                    dir = Quaternion.Euler(p, y, 0f) * Vector3.forward * dirMag;
+                }
 
-				ik.solver.IKPosition = pivot + dir;
+                ik.solver.IKPosition = pivot + dir;
 			}
 
 			// Min distance from the pivot
@@ -226,74 +217,67 @@ namespace RootMotion.FinalIK
 			RootRotation();
 
 			// Offset mode
-			if(useAnimatedAimDirection)
-			{
+			if (useAnimatedAimDirection) {
 				ik.solver.axis = ik.solver.transform.InverseTransformVector(ik.transform.rotation * animatedAimDirection);
 			}
 		}
 
-		private float yawV, pitchV, dirMagV;
+        private float yawV, pitchV, dirMagV;
 
 		// Pivot of rotating the aiming direction.
 		private Vector3 pivot {
-			get
-			{
-				return ik.transform.position + ik.transform.rotation * pivotOffsetFromRoot;
+			get {
+                return ik.transform.position + ik.transform.rotation * pivotOffsetFromRoot;
 			}
 		}
 
 		// Make sure aiming target is not too close (might make the solver instable when the target is closer to the first bone than the last bone is).
-		void ApplyMinDistance()
-		{
+		void ApplyMinDistance() {
 			Vector3 aimFrom = pivot;
 			Vector3 direction = (ik.solver.IKPosition - aimFrom);
 			direction = direction.normalized * Mathf.Max(direction.magnitude, minDistance);
-
+				
 			ik.solver.IKPosition = aimFrom + direction;
 		}
 
 		// Character root will be rotate around the Y axis to keep root forward within this angle from the aiming direction.
-		private void RootRotation()
-		{
-			float max = Mathf.Lerp(180f, maxRootAngle * turnToTargetMlp, ik.solver.IKPositionWeight);
+		private void RootRotation() {
+            float max = Mathf.Lerp(180f, maxRootAngle * turnToTargetMlp, ik.solver.IKPositionWeight);
 
-			if(max < 180f)
-			{
+			if (max < 180f) {
 				Vector3 faceDirLocal = Quaternion.Inverse(ik.transform.rotation) * (ik.solver.IKPosition - pivot);
 				float angle = Mathf.Atan2(faceDirLocal.x, faceDirLocal.z) * Mathf.Rad2Deg;
 
 				float rotation = 0f;
 
-				if(angle > max)
-				{
+				if (angle > max) {
 					rotation = angle - max;
-					if(!turningToTarget && turnToTarget) StartCoroutine(TurnToTarget());
+                    if (!turningToTarget && turnToTarget) StartCoroutine(TurnToTarget());
 				}
-				if(angle < -max)
-				{
+				if (angle < -max) {
 					rotation = angle + max;
-					if(!turningToTarget && turnToTarget) StartCoroutine(TurnToTarget());
-				}
+                    if (!turningToTarget && turnToTarget) StartCoroutine(TurnToTarget());
+                }
 
-				ik.transform.rotation = Quaternion.AngleAxis(rotation, ik.transform.up) * ik.transform.rotation;
+                ik.transform.rotation = Quaternion.AngleAxis(rotation, ik.transform.up) * ik.transform.rotation;		
 			}
 		}
 
-		// Aligns the root forward to target direction after "Max Root Angle" has been exceeded.
-		private IEnumerator TurnToTarget()
-		{
-			turningToTarget = true;
+        // Aligns the root forward to target direction after "Max Root Angle" has been exceeded.
+        private IEnumerator TurnToTarget()
+        {
+            turningToTarget = true;
+            
+            while (turnToTargetMlp > 0f)
+            {
+                turnToTargetMlp = Mathf.SmoothDamp(turnToTargetMlp, 0f, ref turnToTargetMlpV, turnToTargetTime);
+                if (turnToTargetMlp < 0.01f) turnToTargetMlp = 0f;
+                
+                 yield return null;
+            }
 
-			while(turnToTargetMlp > 0f)
-			{
-				turnToTargetMlp = Mathf.SmoothDamp(turnToTargetMlp, 0f, ref turnToTargetMlpV, turnToTargetTime);
-				if(turnToTargetMlp < 0.01f) turnToTargetMlp = 0f;
-
-				yield return null;
-			}
-
-			turnToTargetMlp = 1f;
-			turningToTarget = false;
-		}
+            turnToTargetMlp = 1f;
+            turningToTarget = false;
+        }
 	}
 }

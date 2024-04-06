@@ -54,7 +54,7 @@ namespace RootMotion.Dynamics
             // Force
             Vector3 force = PhysXTools.GetLinearAcceleration(r.position, target.position);
             force += targetVelocity;
-            force -= r.velocity;
+            force -= r.linearVelocity;
             if (r.useGravity) force -= Physics.gravity * Time.deltaTime;
             force *= forceWeight;
             r.AddForce(force, ForceMode.VelocityChange);

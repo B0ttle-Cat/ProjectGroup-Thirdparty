@@ -71,13 +71,13 @@ namespace RootMotion.Dynamics {
         /// <summary>
         /// If assigned, sets prop colliders to this PhysicMaterial when picked up.
         /// </summary>
-        public PhysicMaterial pickedUpMaterial;
+        public PhysicsMaterial pickedUpMaterial;
 
         [Tooltip("If assigned, sets prop colliders to this PhysicMaterial when dropped.")]
         /// <summary>
         /// If assigned, sets prop colliders to this PhysicMaterial when dropped.
         /// </summary>
-        public PhysicMaterial droppedMaterial;
+        public PhysicsMaterial droppedMaterial;
 
         /// <summary>
         /// Is this prop picked up and connected to a PropRoot?
@@ -176,7 +176,7 @@ namespace RootMotion.Dynamics {
 			muscle.angularZMotion = ConfigurableJointMotion.Free;
 		}
 
-        private void SetMaterial(PhysicMaterial material)
+        private void SetMaterial(PhysicsMaterial material)
         {
             if (material == null) return;
 

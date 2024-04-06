@@ -9,7 +9,7 @@ namespace RootMotion.Dynamics {
 		public Vector3 initialVelocity;
 
 		void Start () {
-			GetComponent<Rigidbody>().velocity = initialVelocity;
+			GetComponent<Rigidbody>().linearVelocity = initialVelocity;
 		}
 	}
 }

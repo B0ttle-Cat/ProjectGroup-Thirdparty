@@ -157,7 +157,7 @@ namespace RootMotion.Dynamics {
 			
 			foreach (Muscle m in behaviour.puppetMaster.muscles) {
 				CoM += m.rigidbody.worldCenterOfMass * m.rigidbody.mass;
-				CoM += m.rigidbody.velocity * m.rigidbody.mass;
+				CoM += m.rigidbody.linearVelocity * m.rigidbody.mass;
 
 				c += m.rigidbody.mass;
 			}
@@ -168,7 +168,7 @@ namespace RootMotion.Dynamics {
 		private Vector3 GetMomentum() {
 			Vector3 sum = Vector3.zero;
 			for (int i = 0; i < behaviour.puppetMaster.muscles.Length; i++) {
-				sum += behaviour.puppetMaster.muscles[i].rigidbody.velocity * behaviour.puppetMaster.muscles[i].rigidbody.mass;
+				sum += behaviour.puppetMaster.muscles[i].rigidbody.linearVelocity * behaviour.puppetMaster.muscles[i].rigidbody.mass;
 			}
 			return sum;
 		}

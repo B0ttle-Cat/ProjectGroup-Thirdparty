@@ -47,7 +47,7 @@ namespace RootMotion.Dynamics
         /// <summary>
         /// If assigned, sets prop colliders to this PhysicMaterial when picked up. If no materials assigned here, will maintain the original PhysicMaterial.
         /// </summary>
-        public PhysicMaterial pickedUpMaterial;
+        public PhysicsMaterial pickedUpMaterial;
 
         [LargeHeader("Additional Pin")]
 
@@ -94,7 +94,7 @@ namespace RootMotion.Dynamics
         private int defaultLayer;
         private Transform defaultParent;
         private Collider[] colliders = new Collider[0];
-        private PhysicMaterial[] droppedMaterials = new PhysicMaterial[0];
+        private PhysicsMaterial[] droppedMaterials = new PhysicsMaterial[0];
 
         private Rigidbody r;
         private float _mass;
@@ -160,7 +160,7 @@ namespace RootMotion.Dynamics
 
             if (!puppetMaster.muscles[propMuscleIndex].joint.gameObject.activeInHierarchy || puppetMaster.muscles[propMuscleIndex].rigidbody.isKinematic)
             {
-                r.velocity = puppetMaster.muscles[propMuscleIndex].mappedVelocity;
+                r.linearVelocity = puppetMaster.muscles[propMuscleIndex].mappedVelocity;
                 r.angularVelocity = puppetMaster.muscles[propMuscleIndex].mappedAngularVelocity;
             }
 
@@ -199,7 +199,7 @@ namespace RootMotion.Dynamics
 
             colliders = GetComponentsInChildren<Collider>();
 
-            droppedMaterials = new PhysicMaterial[colliders.Length];
+            droppedMaterials = new PhysicsMaterial[colliders.Length];
             for (int i = 0; i < colliders.Length; i++)
             {
                 droppedMaterials[i] = colliders[i].sharedMaterial;
@@ -251,8 +251,8 @@ namespace RootMotion.Dynamics
             localCenterOfMass = r.centerOfMass;
             
             _mass = r.mass;
-            _drag = r.drag;
-            _angularDrag = r.angularDrag;
+            _drag = r.linearDamping;
+            _angularDrag = r.angularDamping;
             _useGravity = r.useGravity;
             _isKinematic = r.isKinematic;
             _interpolation = r.interpolation;
@@ -268,8 +268,8 @@ namespace RootMotion.Dynamics
 
             r = gameObject.AddComponent<Rigidbody>();
             r.mass = _mass;
-            r.drag = _drag;
-            r.angularDrag = _angularDrag;
+            r.linearDamping = _drag;
+            r.angularDamping = _angularDrag;
             r.useGravity = _useGravity;
             r.isKinematic = _isKinematic;
             r.interpolation = _interpolation;

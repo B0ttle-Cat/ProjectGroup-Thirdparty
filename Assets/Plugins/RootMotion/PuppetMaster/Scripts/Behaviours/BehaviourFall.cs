@@ -147,7 +147,7 @@ namespace RootMotion.Dynamics {
 			foreach (Muscle m in puppetMaster.muscles) {
 				m.state.pinWeightMlp = 0f;
 
-				m.rigidbody.velocity = m.mappedVelocity;
+				m.rigidbody.linearVelocity = m.mappedVelocity;
 				m.rigidbody.angularVelocity = m.mappedAngularVelocity;
 			}
 
@@ -177,7 +177,7 @@ namespace RootMotion.Dynamics {
 			// Ending conditions
 			timer += deltaTime;
 
-			if (!endTriggered && canEnd && timer >= minTime && !puppetMaster.isBlending && puppetMaster.muscles[0].rigidbody.velocity.magnitude < maxEndVelocity) {
+			if (!endTriggered && canEnd && timer >= minTime && !puppetMaster.isBlending && puppetMaster.muscles[0].rigidbody.linearVelocity.magnitude < maxEndVelocity) {
 				endTriggered = true;
 				onEnd.Trigger(puppetMaster);
 				return;
@@ -203,7 +203,7 @@ namespace RootMotion.Dynamics {
 		private float GetBlendTarget(float groundHeight) {
 			if (groundHeight > writheHeight) return 1f;
 
-			Vector3 verticalVelocity = V3Tools.ExtractVertical(puppetMaster.muscles[0].rigidbody.velocity, puppetMaster.targetRoot.up, 1f);
+			Vector3 verticalVelocity = V3Tools.ExtractVertical(puppetMaster.muscles[0].rigidbody.linearVelocity, puppetMaster.targetRoot.up, 1f);
 			float velocityY = verticalVelocity.magnitude;
 			if (Vector3.Dot(verticalVelocity, puppetMaster.targetRoot.up) < 0f) velocityY = -velocityY;
 

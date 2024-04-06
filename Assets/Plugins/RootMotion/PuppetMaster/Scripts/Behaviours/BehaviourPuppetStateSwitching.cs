@@ -71,7 +71,7 @@ namespace RootMotion.Dynamics
                         
                         if (maxRigidbodyVelocity != Mathf.Infinity)
                         {
-                            m.rigidbody.velocity = Vector3.ClampMagnitude(m.rigidbody.velocity, maxRigidbodyVelocity);
+                            m.rigidbody.linearVelocity = Vector3.ClampMagnitude(m.rigidbody.linearVelocity, maxRigidbodyVelocity);
                             m.mappedVelocity = Vector3.ClampMagnitude(m.mappedVelocity, maxRigidbodyVelocity);
                         }
                         

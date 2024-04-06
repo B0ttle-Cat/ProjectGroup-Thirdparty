@@ -208,8 +208,8 @@ namespace RootMotion.Dynamics
                 {
                     muscle.additionalPinWeight = currentProp.additionalPinWeight;
                     muscle.additionalRigidbody.mass = currentProp.additionalPinMass;// * Mathf.Max(muscle.additionalPinWeight, currentProp.mass * 0.1f);
-                    muscle.additionalRigidbody.drag = muscle.rigidbody.drag;
-                    muscle.additionalRigidbody.angularDrag = muscle.rigidbody.angularDrag;
+                    muscle.additionalRigidbody.linearDamping = muscle.rigidbody.linearDamping;
+                    muscle.additionalRigidbody.angularDamping = muscle.rigidbody.angularDamping;
                     muscle.additionalRigidbody.useGravity = muscle.rigidbody.useGravity;
 
                     muscle.additionalRigidbody.inertiaTensor = Vector3.one * 0.00001f;

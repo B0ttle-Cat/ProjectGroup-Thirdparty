@@ -144,7 +144,7 @@ namespace RootMotion.Dynamics
 
         public void ClearVelocities()
         {
-            rigidbody.velocity = Vector3.zero;
+            rigidbody.linearVelocity = Vector3.zero;
             rigidbody.angularVelocity = Vector3.zero;
 
             targetVelocity = Vector3.zero;
@@ -182,7 +182,7 @@ namespace RootMotion.Dynamics
             w = Mathf.Pow(w, pinPow);
 
             if (Time.deltaTime > 0f) positionOffset /= Time.deltaTime;
-            Vector3 force = -rigidbody.velocity + targetVelocity + positionOffset;
+            Vector3 force = -rigidbody.linearVelocity + targetVelocity + positionOffset;
             force *= w;
             if (pinDistanceFalloff > 0f) force /= 1f + positionOffset.sqrMagnitude * pinDistanceFalloff;
 

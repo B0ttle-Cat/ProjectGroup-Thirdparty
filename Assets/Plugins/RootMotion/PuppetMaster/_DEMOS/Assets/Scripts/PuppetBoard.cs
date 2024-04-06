@@ -24,7 +24,7 @@ namespace RootMotion.Demos {
 			r.MovePosition(target.position);
 			r.MoveRotation(target.rotation);
 
-			r.velocity = target.velocity;
+			r.linearVelocity = target.linearVelocity;
 			r.angularVelocity = target.angularVelocity;
 
 			// Turn the body target towards Vector3.up so the Puppet would seem to try to maintain balance on the board.

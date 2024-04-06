@@ -131,7 +131,7 @@ namespace RootMotion.Dynamics {
                     m.rigidbody.gameObject.SetActive(true);
                     m.SetKinematic(false);
                     m.rigidbody.WakeUp();
-                    m.rigidbody.velocity = m.mappedVelocity;
+                    m.rigidbody.linearVelocity = m.mappedVelocity;
                     m.rigidbody.angularVelocity = m.mappedAngularVelocity;
                 }
 			}
@@ -181,7 +181,7 @@ namespace RootMotion.Dynamics {
                 {
                     m.SetKinematic(false);
                     m.rigidbody.WakeUp();
-                    m.rigidbody.velocity = m.mappedVelocity;
+                    m.rigidbody.linearVelocity = m.mappedVelocity;
                     m.rigidbody.angularVelocity = m.mappedAngularVelocity;
                 }
 			}
