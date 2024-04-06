@@ -1,5 +1,10 @@
 {
-  "name": "com.b0ttlecat.thirdparty",
-  "version": "0.0.1",
-  "displayName": "BC.Thirdparty"
+	"name": "com.b0ttlecat.thirdparty",
+	"version": "0.0.1",
+	"displayName": "BC.Thirdparty",
+	"author": {
+		"name": "B0ttle-Cat",
+		"email": "kolazkr.lgb@gmail.com",
+		"url": "https://github.com/B0ttle-Cat/ProjectGroup"
+	}
 }
