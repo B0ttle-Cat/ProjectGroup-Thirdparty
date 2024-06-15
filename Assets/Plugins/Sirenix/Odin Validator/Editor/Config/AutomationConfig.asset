@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnPlayMode: 1
   OnPlayModeIfWarnings: 0
-  OnPlayModeIfErrors: 5
+  OnPlayModeIfErrors: 0
   OnPlayModeAlwaysCompleteValidationFully: 0
   OnPlayModeFlashScreen: 0
   OnPlayModeSetup:
     Profile: 0
-    ProfileAsset: {fileID: 0}
+    ProfileAsset: {fileID: 11400000, guid: b0f2f36110088734984e6f060bd88dac, type: 2}
   OnBuild: 1
   OnBuildIfWarnings: 0
   OnBuildIfErrors: 7
