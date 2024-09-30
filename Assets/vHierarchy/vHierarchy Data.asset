@@ -1,0 +1,455 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9752b0c8e144801967e6897679604b, type: 3}
+  m_Name: vHierarchy Data
+  m_EditorClassIdentifier: 
+  sceneDatas_byGuid:
+    keys:
+    - be6bf4edfc7c576498823a1c4852bfe5
+    - 
+    - 3fcc40fda7e16d0469dcda406c86ad27
+    values:
+    - goDatas_byGlobalId:
+        keys:
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-637059022-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-975032200-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-280405638-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-385535319-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-448125901-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1555824965-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1732924253-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-2074201082-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1822144952-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-627766342-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-393816902-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1101337145-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1066036322-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1734920494-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-395395371-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1622661093-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-105104475-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-35309960-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1559699669-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1098984989-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-873735257-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-410442499-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1017060208-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-937843354-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-509267792-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1993483319-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1916381530-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1260328114-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1687930720-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-507161084-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-26688395-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1689010552-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-342752896-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-729131333-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-516710824-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-398936555-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-537736016-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-732371933-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1126823902-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-2114682434-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-662573100-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-294120770-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1048964477-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1020199976-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-2067082317-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-289459577-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-671911352-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1144702026-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-215879961-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1203120749-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-268114735-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-100817937-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1114131534-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-430413783-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-227039648-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-255867717-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-772728538-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1882812102-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-634172760-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1253650061-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1736265014-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-90143896-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-716329486-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1389343161-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1372313343-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1681119867-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1043231787-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1200948215-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-129175596-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1599493016-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-717218526-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-580058102-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1903419198-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1617571172-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1328207944-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-367624240-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1205904037-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-419248814-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1292221977-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1122313375-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1098676086-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1496622485-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-2000563214-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-328645251-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1118899690-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1059600597-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1440115082-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1100103996-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-539208442-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1471304582-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1147958643-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1546372787-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-56170493-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-938209113-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-426572157-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-638118791-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1649169109-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1455028279-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1467073418-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1414266393-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-502085117-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1320525622-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-661474779-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-839338608-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-505759060-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-145570827-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-37455857-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1569577807-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1113216175-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1759994962-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-497812997-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-923142236-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1117376307-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-502489962-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-50271841-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1548825732-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1092494163-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-477157266-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1044198327-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-2066426931-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1002840036-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-798373444-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1877343063-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-109888351-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-2021056840-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1833626137-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1204942980-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-277835759-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-75349535-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-81813788-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-455297002-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-606389976-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-145259285-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1838706805-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-1530036984-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-415869253-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-2096125016-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-749228519-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-566761991-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-2069784405-0
+        values:
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+    - goDatas_byGlobalId:
+        keys: []
+        values: []
+    - goDatas_byGlobalId:
+        keys:
+        - globalObjectIdString: GlobalObjectId_V1-1-3fcc40fda7e16d0469dcda406c86ad27-2809603932612087871-0
+        - globalObjectIdString: GlobalObjectId_V1-1-3fcc40fda7e16d0469dcda406c86ad27-0-0
+        values:
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube

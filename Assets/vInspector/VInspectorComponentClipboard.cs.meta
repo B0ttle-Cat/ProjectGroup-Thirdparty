@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b4a601d21911941c9b6aa75950470764
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 252297
+  packageName: vInspector 2
+  packageVersion: 2.0.7
+  assetPath: Assets/vInspector/VInspectorComponentClipboard.cs
+  uploadId: 684623

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 913b985f9895c47cbb23d4dabc002788
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 252297
+  packageName: vInspector 2
+  packageVersion: 2.0.7
+  assetPath: Assets/vInspector/VInspectorAssetPreview.shader
+  uploadId: 684623

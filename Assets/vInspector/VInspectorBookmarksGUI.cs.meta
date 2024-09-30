@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9ee37a1072bf4467d923d9ef51a0e63d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 252297
+  packageName: vInspector 2
+  packageVersion: 2.0.7
+  assetPath: Assets/vInspector/VInspectorBookmarksGUI.cs
+  uploadId: 684623
