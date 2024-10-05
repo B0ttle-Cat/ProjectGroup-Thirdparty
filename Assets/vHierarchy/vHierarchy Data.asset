@@ -160,7 +160,10 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-749228519-0
         - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-566761991-0
         - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-2069784405-0
+        - globalObjectIdString: GlobalObjectId_V1-2-be6bf4edfc7c576498823a1c4852bfe5-915401153-0
         values:
+        - colorIndex: 0
+          iconNameOrGuid: d_PreMatCube
         - colorIndex: 0
           iconNameOrGuid: d_PreMatCube
         - colorIndex: 0
