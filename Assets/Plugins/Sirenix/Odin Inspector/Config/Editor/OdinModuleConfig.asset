@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   configurations:
   - ID: Unity.Mathematics
-    ActivationSettings: 0
+    ActivationSettings: 1
   - ID: Unity.Addressables
-    ActivationSettings: 0
+    ActivationSettings: 1
   - ID: Unity.Localization
     ActivationSettings: 0
   - ID: Unity.Entities
