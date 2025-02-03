@@ -17,3 +17,10 @@ TrueTypeFontImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 305180
+  packageName: CombatGirls_RifleCharacterPack
+  packageVersion: 
+  assetPath: Packages/com.b0ttlecat.thirdparty/TextMesh Pro/Fonts/LiberationSans.ttf
+  uploadId: 0
