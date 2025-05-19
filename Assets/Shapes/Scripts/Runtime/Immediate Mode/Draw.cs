@@ -367,7 +367,7 @@ namespace Shapes {
 
 		static MpbText mpbText = new MpbText();
 
-		[OvldGenCallTarget] static void TextRect_Internal( string content,
+		[OvldGenCallTarget] static void TextRect_Internal( [OvldDefault( "null" )] string content,
 														   [OvldDefault( "null" )] TextElement element,
 														   Rect rect,
 														   [OvldDefault( nameof(Font) )] TMP_FontAsset font,
@@ -381,7 +381,7 @@ namespace Shapes {
 		}
 
 		[OvldGenCallTarget] static void Text_Internal( bool isRect,
-													   string content,
+													   [OvldDefault( "null" )] string content,
 													   [OvldDefault( "null" )] TextElement element,
 													   [OvldDefault( "default" )] Vector2 pivot, // ignored for simple text
 													   [OvldDefault( "default" )] Vector2 size, // ignored for simple text
@@ -434,7 +434,8 @@ namespace Shapes {
 			tmp.color = color;
 			tmp.fontSize = fontSize;
 			tmp.alignment = align.GetTMPAlignment();
-			tmp.text = content;
+			if( content != null )
+				tmp.text = content;
 			tmp.Curvature = TextCurvature;
 			tmp.CurvaturePivot = TextCurvaturePivot;
 

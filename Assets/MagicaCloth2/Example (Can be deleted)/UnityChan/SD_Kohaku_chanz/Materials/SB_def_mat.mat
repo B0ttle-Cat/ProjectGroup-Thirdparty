@@ -21,8 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SB_def_mat
-  m_Shader: {fileID: -6465566751694194690, guid: e0b73429f84a56840ba17b216237f806,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: e0b73429f84a56840ba17b216237f806, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -105,7 +104,7 @@ Material:
     - _Mode: 3
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _QueueControl: -1
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0

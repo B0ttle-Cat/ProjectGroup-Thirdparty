@@ -427,7 +427,8 @@ namespace Shapes {
 			// but! only when they're in the scene
 			if( IsUsingUniqueMaterials ) {
 				MakeSureMaterialInstancesAreGood( mats );
-				mats = instancedMaterials;
+				for( int i = 0; i < mats.Length; i++ )
+					mats[i] = instancedMaterials[i];
 			}
 
 			VerifyComponents();

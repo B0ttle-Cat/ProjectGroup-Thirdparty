@@ -10,6 +10,7 @@ AssetOrigin:
   serializedVersion: 1
   productId: 173167
   packageName: Shapes
-  packageVersion: 4.5.0
-  assetPath: Assets/Shapes/Shaders/Generated Materials/Line 3D LinearBurn (CAP_ROUND).mat
-  uploadId: 705858
+  packageVersion: 4.5.1
+  assetPath: Packages/com.b0ttlecat.thirdparty/Shapes/Shaders/Generated Materials/Line
+    3D LinearBurn (CAP_ROUND).mat
+  uploadId: 753328

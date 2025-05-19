@@ -10,6 +10,7 @@ using UnityEngine.Rendering.HighDefinition;
 #if SHAPES_URP && UNITY_6000_0_OR_NEWER
 using UnityEngine.Rendering.RenderGraphModule;
 using CommandBufferType = UnityEngine.Rendering.RasterCommandBuffer;
+
 #else
 using CommandBufferType = UnityEngine.Rendering.CommandBuffer;
 #endif
@@ -31,16 +32,19 @@ namespace Shapes {
 
 
 		#if UNITY_6000_0_OR_NEWER
-		private class PassData {}
+		private class PassData {
+			public DrawCommand drawCommand;
+		}
 
 		public override void RecordRenderGraph( RenderGraph renderGraph, ContextContainer frameData ) {
-			using IRasterRenderGraphBuilder builder = renderGraph.AddRasterRenderPass<PassData>( "Render Shapes", out _ );
+			using IRasterRenderGraphBuilder builder = renderGraph.AddRasterRenderPass<PassData>( "Render Shapes", out PassData data );
+			data.drawCommand = drawCommand;
 			builder.AllowPassCulling( false );
 			UniversalResourceData resourceData = frameData.Get<UniversalResourceData>();
 			builder.SetRenderAttachment( resourceData.cameraColor, 0, AccessFlags.Write );
 			builder.SetRenderFunc(
-				( PassData _, RasterGraphContext context ) => {
-					drawCommand.AppendToBuffer( context.cmd );
+				( PassData dataParam, RasterGraphContext context ) => {
+					dataParam.drawCommand.AppendToBuffer( context.cmd );
 				}
 			);
 		}
